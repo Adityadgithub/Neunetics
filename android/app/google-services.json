@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "743161390918",
+    "project_id": "neunetics",
+    "storage_bucket": "neunetics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743161390918:android:40a6fa90637ee97dac6747",
+        "android_client_info": {
+          "package_name": "com.mycompany.neunetics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743161390918-bl4rs1hm0cuohmif86n2a2e710e4ne2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.neunetics",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "743161390918-1ut3u5ul3c05sonlkn1563g2o7ugb4ta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7UinzHL7CWgCdjh-U33etz5X7gvb2Slc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743161390918-1ut3u5ul3c05sonlkn1563g2o7ugb4ta.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "743161390918-qmns7rtn1m2mkgbsblhou0nafhgps83v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.neunetics"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
