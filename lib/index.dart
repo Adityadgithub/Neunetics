@@ -22,7 +22,7 @@ export '/mentor/homepage/profile/switchacc/switchacc_widget.dart'
     show SwitchaccWidget;
 export '/mentor/homepage/profile/notificationsettings/notificationsettings_widget.dart'
     show NotificationsettingsWidget;
-export '/mentor/homepage/profile/privacypolicy/privacypolicy_widget.dart'
+export 'common/privacypolicy/privacypolicy_widget.dart'
     show PrivacypolicyWidget;
 export '/mentor/homepage/profile/achievement/addachivement/addachivement_widget.dart'
     show AddachivementWidget;
@@ -42,8 +42,6 @@ export '/mentee/home_page/profile/mentee_switchacc/mentee_switchacc_widget.dart'
     show MenteeSwitchaccWidget;
 export '/mentee/home_page/profile/mentee_profile/mentee_profile_widget.dart'
     show MenteeProfileWidget;
-export '/mentee/home_page/profile/privacypolicy_copy/privacypolicy_copy_widget.dart'
-    show PrivacypolicyCopyWidget;
 export '/mentee/home_page/profile/mentee_notificationsettings/mentee_notificationsettings_widget.dart'
     show MenteeNotificationsettingsWidget;
 export '/mentee/home_page/profile/mentee_edit_profile/mentee_edit_profile_widget.dart'

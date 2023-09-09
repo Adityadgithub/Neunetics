@@ -193,6 +193,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
             ],
           ),
         ),
+     
       ),
     );
   }

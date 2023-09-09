@@ -29,7 +29,7 @@ class BrowseMentorsCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'Browse Mentors',
-      apiUrl: 'http://43.204.29.70:8081/api/v1/users/browse',
+      apiUrl: 'http://13.200.23.138:8081/api/v1/users/browse',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -66,7 +66,7 @@ class SignupUsersCall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Signup users',
-      apiUrl: 'http://43.204.29.70:8081/api/v1/users/user/SignUp',
+      apiUrl: 'http://13.200.23.138:8081/api/v1/users/user/SignUp',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -145,7 +145,7 @@ class LoginUserCall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Login user',
-      apiUrl: 'http://43.204.29.70:8081/api/v1/users/user/login',
+      apiUrl: 'http://13.200.23.138:8081/api/v1/users/user/login',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -157,6 +157,31 @@ class LoginUserCall {
       cache: false,
     );
   }
+}
+
+class GetFeaturedMentorsCall {
+  static Future<ApiCallResponse> call() {
+    print('apicalled mentor list');
+    return ApiManager.instance.makeApiCall(
+      callName: 'Get Featured Mentors',
+      apiUrl: 'http://13.200.23.138:8081/api/v1/users/featured-mentors',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  static dynamic featuredmentorlist(dynamic response) {
+    print(response);
+    return getJsonField(
+        response,
+        r'''$.featuredMentors''',
+        true,
+      );}
 }
 
 class ApiPagingParams {

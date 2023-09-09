@@ -2,14 +2,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/booking/booking_widget.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/edit_profile/edit_profile_widget.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/notificationsettings/notificationsettings_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/booking/booking_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/edit_profile/edit_profile_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/notificationsettings/notificationsettings_widget.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../mentee/home_page/all_chats_page/all_chats_page_widget.dart';
 import '../../mentee/home_page/chat_page/chat_page_widget.dart';
 import '../../mentee/login_signup/menteelogin/menteelogin_widget.dart';
 import '../../mentee/login_signup/menteesignup/menteesignup_widget.dart';
+import '../../mentor/homepage/about/about_widget.dart';
+import '../../mentor/homepage/all_chats_page/all_chats_page_widget.dart';
 import '../flutter_flow_theme.dart';
 import '/backend/backend.dart';
 
@@ -119,7 +121,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'About',
           path: '/about',
-          builder: (context, params) => AboutWidget(),
+          builder: (context, params) => MenteeRequest()
         ),
         FFRoute(
           name: 'Profile',
@@ -223,11 +225,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/menteeProfile',
           builder: (context, params) => MenteeProfileWidget(),
         ),
-        FFRoute(
-          name: 'PrivacypolicyCopy',
-          path: '/privacypolicyCopy',
-          builder: (context, params) => PrivacypolicyCopyWidget(),
-        ),
+       
         FFRoute(
           name: 'Mentee_notificationsettings',
           path: '/menteeNotificationsettings',

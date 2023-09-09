@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/booking/booking_widget.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/edit_profile/edit_profile_widget.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/notificationsettings/notificationsettings_widget.dart';
-import 'package:neunetics_mentor_part/mentor/homepage/profile/profile/profile_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/booking/booking_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/edit_profile/edit_profile_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/notificationsettings/notificationsettings_widget.dart';
+import 'package:neunetics_mentee_part/mentor/homepage/profile/profile/profile_widget.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
 import 'backend/firebase/firebase_config.dart';
@@ -13,11 +13,13 @@ import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
+import 'mentee/MenteeInitialScreen.dart';
 import 'mentee/home_page/all_chats_page/all_chats_page_widget.dart';
 import 'mentee/home_page/chat_page/chat_page_widget.dart';
 import 'mentee/login_signup/menteelogin/menteelogin_widget.dart';
 import 'mentee/login_signup/menteesignup/menteesignup_widget.dart';
 import 'mentor/MentorInitalScreen.dart';
+import 'mentor/homepage/about/about_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -71,8 +73,9 @@ class _MyAppState extends State<MyApp> {
           '/': (context) => MentorInitalScreen(),
           'loginas': (context) => LoginasWidget(),
           'Mentorlogin': (context) => MentorloginWidget(),
+          'MenteeInitialScreen':(context) => MenteeInitialScreen(),
           'homepage': (context) => HomepageWidget(),
-          'About': (context) => AboutWidget(),
+          'About': (context) => MenteeRequest(),
           'Aboutus': (context) => AboutusWidget(),
           'EditProfile': (context) => EditProfileWidget_mentor(),
           'Booking': (context) => BookingWidget_mentor(),
@@ -92,7 +95,6 @@ class _MyAppState extends State<MyApp> {
           'Menteesignup': (context) => MenteesignupWidget(),
           'Mentee_switchacc': (context) => MenteeSwitchaccWidget(),
           'Mentee_Profile': (context) => MenteeProfileWidget(),
-          'PrivacypolicyCopy': (context) => PrivacypolicyCopyWidget(),
           'Mentee_notificationsettings': (context) =>
               MenteeNotificationsettingsWidget(),
           'MenteeEditProfile': (context) => MenteeEditProfileWidget(),
@@ -102,10 +104,9 @@ class _MyAppState extends State<MyApp> {
           'Pricing': (context) => PricingWidget(),
           'Mentee_changepassword': (context) => MenteeChangepasswordWidget(),
           'AllMentors': (context) => AllMentorsWidget(),
-          'Mentor_allchats': (context) => AllChatsPageWidget(),
+          'Mentor_allchats': (context) => AllChatsPage_mentee(),
           'ChatPageWidget':(context) => ChatPageWidget()
         },
-     
       ),
     );
   }
@@ -115,7 +116,6 @@ class _MyAppState extends State<MyApp> {
 
 class NavBarPage extends StatefulWidget {
   NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
-
   final String? initialPage;
   final Widget? page;
 

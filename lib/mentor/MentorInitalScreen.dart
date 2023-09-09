@@ -18,6 +18,7 @@ class _MentorInitalScreenState extends State<MentorInitalScreen> {
  final List<Widget> _pages = [
     HomepageWidget(),
     AllChatsPageWidget(),
+    WriteBlogs(),
     NotificationsWidget(),
     Profile_mentor(),
   ];
@@ -51,9 +52,17 @@ class _MentorInitalScreenState extends State<MentorInitalScreen> {
                           'assets/images/bottomNavIcon/msg_unactive.png'),
                     )),
                 BottomNavigationBarItem(
+                    label: 'chat',
+                    icon: Image(
+                      image:BottomNavIndex == 2
+                          ?  AssetImage(
+                          'assets/images/bottomNavIcon/msg_active.png') :   AssetImage(
+                          'assets/images/bottomNavIcon/msg_unactive.png'),
+                    )),
+                BottomNavigationBarItem(
                     label: 'notification',
                     icon: Image(
-                      image: BottomNavIndex == 2
+                      image: BottomNavIndex == 3
                           ?  AssetImage(
                           'assets/images/bottomNavIcon/notification_active.png'):  AssetImage(
                           'assets/images/bottomNavIcon/notification_unactive.png'),
@@ -61,7 +70,7 @@ class _MentorInitalScreenState extends State<MentorInitalScreen> {
                 BottomNavigationBarItem(
                     label: 'myprofile',
                     icon: Image(
-                      image:BottomNavIndex == 3
+                      image:BottomNavIndex == 4
                           ? AssetImage(
                           'assets/images/bottomNavIcon/myprofile_active.png') : AssetImage(
                           'assets/images/bottomNavIcon/myprofile_unactive.png'),

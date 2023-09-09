@@ -2,19 +2,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'about_model.dart';
 export 'about_model.dart';
 
-class AboutWidget extends StatefulWidget {
-  const AboutWidget({Key? key}) : super(key: key);
-
+class MenteeRequest extends StatefulWidget {
+  const MenteeRequest({Key? key}) : super(key: key);
   @override
-  _AboutWidgetState createState() => _AboutWidgetState();
+  _MenteeRequestState createState() => _MenteeRequestState();
 }
 
-class _AboutWidgetState extends State<AboutWidget> {
+class _MenteeRequestState extends State<MenteeRequest> {
   late AboutModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();

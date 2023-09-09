@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class NeuneticsMentorPartFirebaseUser extends BaseAuthUser {
-  NeuneticsMentorPartFirebaseUser(this.user);
+class NeuneticsMenteePartFirebaseUser extends BaseAuthUser {
+  NeuneticsMenteePartFirebaseUser(this.user);
   User? user;
   bool get loggedIn => user != null;
 
@@ -48,10 +48,10 @@ class NeuneticsMentorPartFirebaseUser extends BaseAuthUser {
   static BaseAuthUser fromUserCredential(UserCredential userCredential) =>
       fromFirebaseUser(userCredential.user);
   static BaseAuthUser fromFirebaseUser(User? user) =>
-      NeuneticsMentorPartFirebaseUser(user);
+      NeuneticsMenteePartFirebaseUser(user);
 }
 
-Stream<BaseAuthUser> neuneticsMentorPartFirebaseUserStream() =>
+Stream<BaseAuthUser> neuneticsMenteePartFirebaseUserStream() =>
     FirebaseAuth.instance
         .authStateChanges()
         .debounce((user) => user == null && !loggedIn
@@ -59,7 +59,7 @@ Stream<BaseAuthUser> neuneticsMentorPartFirebaseUserStream() =>
             : Stream.value(user))
         .map<BaseAuthUser>(
       (user) {
-        currentUser = NeuneticsMentorPartFirebaseUser(user);
+        currentUser = NeuneticsMenteePartFirebaseUser(user);
         return currentUser!;
       },
     );

@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'chat_page_model.dart';
 export 'chat_page_model.dart';
@@ -143,7 +142,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
-                      child: SvgPicture.asset(
+                      child: Image.asset(
                         'assets/images/Google_Meet_icon_(2020).svg',
                         width: 23.0,
                         height: 23.0,
@@ -153,7 +152,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: SvgPicture.asset(
+                    child: Image.asset(
                       'assets/images/18362309891600040225.svg',
                       width: 31.0,
                       height: 31.0,

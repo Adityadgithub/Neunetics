@@ -5,19 +5,15 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'TimeModel.dart';
-import 'send_request_model.dart';
-export 'send_request_model.dart';
 
-class SendRequestWidget extends StatefulWidget {
-  const SendRequestWidget({Key? key}) : super(key: key);
+class WriteBlogs extends StatefulWidget {
+  const WriteBlogs({Key? key}) : super(key: key);
 
   @override
-  _SendRequestWidgetState createState() => _SendRequestWidgetState();
+  _WriteBlogsState createState() => _WriteBlogsState();
 }
 
-class _SendRequestWidgetState extends State<SendRequestWidget> {
-  late SendRequestModel _model;
+class _WriteBlogsState extends State<WriteBlogs> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -29,15 +25,11 @@ class _SendRequestWidgetState extends State<SendRequestWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SendRequestModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textController2 ??= TextEditingController();
   }
 
   @override
   void dispose() {
-    _model.dispose();
 
     super.dispose();
   }
@@ -266,11 +258,12 @@ class _SendRequestWidgetState extends State<SendRequestWidget> {
                                     selectedtime = index;
                                   });
                                 },
-                                child: TimeModel(
-                                  time: timelist[index],
-                                  selectedtime: selectedtime,
-                                  thisindex: index,
-                                ))),
+                                // child: TimeModel(
+                                //   time: timelist[index],
+                                //   selectedtime: selectedtime,
+                                //   thisindex: index,
+                                // )
+                                )),
                       ),
                     ],
                   ),

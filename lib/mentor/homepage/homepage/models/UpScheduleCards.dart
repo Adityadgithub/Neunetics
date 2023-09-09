@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:neunetics_mentor_part/flutter_flow/flutter_flow_animations.dart';
 
+import '../../../../flutter_flow/flutter_flow_animations.dart';
 import '../../../../flutter_flow/flutter_flow_theme.dart';
 
 class UpScheduleCards extends StatelessWidget {

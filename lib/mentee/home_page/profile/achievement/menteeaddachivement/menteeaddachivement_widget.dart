@@ -79,10 +79,7 @@ class _MenteeaddachivementWidgetState extends State<MenteeaddachivementWidget> {
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 100.0,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -117,7 +114,7 @@ class _MenteeaddachivementWidgetState extends State<MenteeaddachivementWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: 'Abhinav Kumar Sankar',
+                                  hintText: '',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -180,11 +177,7 @@ class _MenteeaddachivementWidgetState extends State<MenteeaddachivementWidget> {
                       ),
                       Container(
                         width: double.infinity,
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
+                    
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -218,7 +211,7 @@ class _MenteeaddachivementWidgetState extends State<MenteeaddachivementWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: 'Please enter your new password',
+                                  hintText: '',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -281,11 +274,7 @@ class _MenteeaddachivementWidgetState extends State<MenteeaddachivementWidget> {
                       ),
                       Container(
                         width: double.infinity,
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
+                        
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
